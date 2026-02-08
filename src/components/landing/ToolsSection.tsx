@@ -8,6 +8,7 @@ import {
   Megaphone,
 } from "lucide-react";
 import logoFormflow from "@/assets/logo-formflow.png";
+import logoZaipher from "@/assets/logo-zaipher.png";
 
 // TODO: Substituir logoUrl pelos paths reais das logos quando forem enviadas
 // TODO: Substituir accessUrl pelos links reais de cada ferramenta
@@ -71,7 +72,7 @@ const tools: ToolData[] = [
   },
   {
     icon: Bot,
-    logoUrl: undefined,
+    logoUrl: logoZaipher,
     title: "Zaipher-IA",
     subtitle: "Agentes de Inteligência Artificial",
     description:
