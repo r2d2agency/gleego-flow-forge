@@ -57,8 +57,10 @@ const Navbar = () => {
 
             {/* CTA */}
             <div className="hidden md:flex items-center gap-4">
-              <Button variant="glass" size="sm">
-                Contato
+              <Button variant="glass" size="sm" asChild>
+                <a href="https://wa.me/5517991308048" target="_blank" rel="noopener noreferrer">
+                  Contato
+                </a>
               </Button>
             </div>
 
@@ -96,8 +98,10 @@ const Navbar = () => {
                   </a>
                 ))}
                 <div className="flex flex-col gap-4 mt-6 pt-6 border-t border-border">
-                  <Button variant="glass" size="lg">
-                    Contato
+                  <Button variant="glass" size="lg" asChild>
+                    <a href="https://wa.me/5517991308048" target="_blank" rel="noopener noreferrer">
+                      Contato
+                    </a>
                   </Button>
                 </div>
               </nav>
