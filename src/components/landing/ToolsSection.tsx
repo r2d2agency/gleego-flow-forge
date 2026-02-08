@@ -30,7 +30,7 @@ const tools: ToolData[] = [
       "Recuperação de abandono",
       "Webhooks e integrações",
     ],
-    color: "cyan",
+    color: "pink",
     purpose: "Coletar dados e enviar os leads diretamente para o CRM.",
     accessUrl: "#",
   },
