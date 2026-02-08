@@ -67,6 +67,12 @@ const ToolCard = ({
       border: "border-gleego-purple/30",
       gradient: "from-gleego-purple/20 to-transparent"
     },
+    red: { 
+      bg: "bg-red-500/10", 
+      text: "text-red-500", 
+      border: "border-red-500/30",
+      gradient: "from-red-500/20 to-transparent"
+    },
   };
 
   const colors = colorClasses[color] || colorClasses.cyan;
