@@ -7,13 +7,14 @@ import {
   Bot,
   Megaphone,
 } from "lucide-react";
+import logoFormflow from "@/assets/logo-formflow.png";
 
 // TODO: Substituir logoUrl pelos paths reais das logos quando forem enviadas
 // TODO: Substituir accessUrl pelos links reais de cada ferramenta
 const tools: ToolData[] = [
   {
     icon: FileText,
-    logoUrl: undefined,
+    logoUrl: logoFormflow,
     title: "FormFlow Builder",
     subtitle: "Captura Inteligente",
     description:
