@@ -6,8 +6,6 @@ import { Menu, X } from "lucide-react";
 const navLinks = [
   { label: "Início", href: "#" },
   { label: "Ferramentas", href: "#ferramentas" },
-  { label: "Como Funciona", href: "#como-funciona" },
-  { label: "Preços", href: "#precos" },
 ];
 
 const Navbar = () => {
@@ -54,11 +52,8 @@ const Navbar = () => {
 
             {/* CTA */}
             <div className="hidden md:flex items-center gap-4">
-              <Button variant="ghost" size="sm">
-                Entrar
-              </Button>
-              <Button variant="hero" size="sm">
-                Começar Agora
+              <Button variant="glass" size="sm">
+                Contato
               </Button>
             </div>
 
@@ -96,11 +91,8 @@ const Navbar = () => {
                   </a>
                 ))}
                 <div className="flex flex-col gap-4 mt-6 pt-6 border-t border-border">
-                  <Button variant="ghost" size="lg">
-                    Entrar
-                  </Button>
-                  <Button variant="hero" size="lg">
-                    Começar Agora
+                  <Button variant="glass" size="lg">
+                    Contato
                   </Button>
                 </div>
               </nav>

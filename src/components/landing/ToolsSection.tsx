@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import ModuleCard from "./ModuleCard";
+import ToolCard, { ToolData } from "./ToolCard";
 import {
   FileText,
   Search,
@@ -8,9 +8,12 @@ import {
   Megaphone,
 } from "lucide-react";
 
-const modules = [
+// TODO: Substituir logoUrl pelos paths reais das logos quando forem enviadas
+// TODO: Substituir accessUrl pelos links reais de cada ferramenta
+const tools: ToolData[] = [
   {
     icon: FileText,
+    logoUrl: undefined, // Aguardando logo
     title: "FormFlow Builder",
     subtitle: "Captura Inteligente",
     description:
@@ -25,9 +28,11 @@ const modules = [
     ],
     color: "cyan",
     purpose: "Coletar dados e enviar os leads diretamente para o CRM.",
+    accessUrl: "#", // Aguardando link
   },
   {
     icon: Search,
+    logoUrl: undefined,
     title: "Garimpador Gleego",
     subtitle: "Prospecção Ativa",
     description:
@@ -42,9 +47,11 @@ const modules = [
     ],
     color: "blue",
     purpose: "Gerar oportunidades comerciais sem depender de tráfego ou anúncios.",
+    accessUrl: "#",
   },
   {
     icon: MessageSquare,
+    logoUrl: undefined,
     title: "Whats.r2bot",
     subtitle: "CRM Inteligente com WhatsApp",
     description:
@@ -59,9 +66,11 @@ const modules = [
     ],
     color: "purple",
     purpose: "Organizar leads, conduzir conversas, gerenciar funil e fechar vendas.",
+    accessUrl: "#",
   },
   {
     icon: Bot,
+    logoUrl: undefined,
     title: "Zaipher-IA",
     subtitle: "Agentes de Inteligência Artificial",
     description:
@@ -76,9 +85,11 @@ const modules = [
     ],
     color: "orange",
     purpose: "Assumir tarefas operacionais humanas e acelerar decisões comerciais.",
+    accessUrl: "#",
   },
   {
     icon: Megaphone,
+    logoUrl: undefined,
     title: "Blaster",
     subtitle: "Disparo de Mensagens em Massa",
     description:
@@ -93,12 +104,13 @@ const modules = [
     ],
     color: "green",
     purpose: "Reativar contatos, fazer remarketing e comunicar em escala.",
+    accessUrl: "#",
   },
 ];
 
-const ModulesSection = () => {
+const ToolsSection = () => {
   return (
-    <section className="py-24 relative">
+    <section id="ferramentas" className="py-24 relative">
       {/* Background Elements */}
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
         <div className="absolute top-1/4 left-0 w-64 h-64 bg-gleego-cyan/5 rounded-full blur-3xl" />
@@ -113,26 +125,21 @@ const ModulesSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-20"
+          className="text-center mb-16"
         >
           <h2 className="font-display text-3xl md:text-5xl font-bold mb-4">
-            Conheça as <span className="text-gradient">ferramentas</span>
+            Nossas <span className="text-gradient">Ferramentas</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Cada módulo foi projetado para resolver uma etapa específica — 
-            todos integrados para máxima eficiência.
+            Cada ferramenta foi projetada para resolver uma etapa específica da jornada comercial — 
+            todas integradas para máxima eficiência.
           </p>
         </motion.div>
 
-        {/* Modules Grid */}
-        <div className="space-y-24">
-          {modules.map((module, index) => (
-            <ModuleCard
-              key={module.title}
-              {...module}
-              index={index}
-              reversed={index % 2 === 1}
-            />
+        {/* Tools Grid */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          {tools.map((tool, index) => (
+            <ToolCard key={tool.title} {...tool} index={index} />
           ))}
         </div>
       </div>
@@ -140,4 +147,4 @@ const ModulesSection = () => {
   );
 };
 
-export default ModulesSection;
+export default ToolsSection;
