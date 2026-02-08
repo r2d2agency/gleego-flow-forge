@@ -1,44 +1,31 @@
 import { motion } from "framer-motion";
-import { Zap, Users, Bot, MessageSquare, Layers } from "lucide-react";
+import logoGleego from "@/assets/logo-gleego.webp";
+import heroBg from "@/assets/hero-bg.mp4";
 
 const Hero = () => {
   return (
-    <section className="relative min-h-[80vh] flex items-center justify-center overflow-hidden pt-20">
-      {/* Background Effects - mais colorido */}
-      <div className="absolute inset-0 bg-glow" />
-      <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-gleego-cyan/15 rounded-full blur-3xl animate-pulse-glow" />
-      <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-gleego-pink/15 rounded-full blur-3xl animate-pulse-glow delay-1000" />
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gleego-green/10 rounded-full blur-3xl" />
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      {/* Video Background */}
+      <video
+        autoPlay
+        loop
+        muted
+        playsInline
+        className="absolute inset-0 w-full h-full object-cover"
+      >
+        <source src={heroBg} type="video/mp4" />
+      </video>
       
-      {/* Floating Icons - cores variadas */}
-      <motion.div
-        className="absolute top-20 left-10 md:left-20 text-gleego-cyan/40"
-        animate={{ y: [0, -10, 0] }}
-        transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-      >
-        <Zap size={40} />
-      </motion.div>
-      <motion.div
-        className="absolute top-40 right-10 md:right-32 text-gleego-pink/40"
-        animate={{ y: [0, -15, 0] }}
-        transition={{ duration: 4, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
-      >
-        <Users size={48} />
-      </motion.div>
-      <motion.div
-        className="absolute bottom-40 left-10 md:left-32 text-gleego-green/40"
-        animate={{ y: [0, -12, 0] }}
-        transition={{ duration: 3.5, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-      >
-        <Bot size={44} />
-      </motion.div>
-      <motion.div
-        className="absolute bottom-32 right-10 md:right-20 text-gleego-orange/40"
-        animate={{ y: [0, -8, 0] }}
-        transition={{ duration: 3.2, repeat: Infinity, ease: "easeInOut", delay: 0.8 }}
-      >
-        <MessageSquare size={36} />
-      </motion.div>
+      {/* Overlay escuro para legibilidade */}
+      <div className="absolute inset-0 bg-background/70" />
+      
+      {/* Cyberpunk Glow Effects */}
+      <div className="absolute top-1/3 left-1/4 w-[500px] h-[500px] bg-gleego-cyan/20 rounded-full blur-[120px] animate-pulse-glow" />
+      <div className="absolute bottom-1/3 right-1/4 w-[400px] h-[400px] bg-gleego-pink/25 rounded-full blur-[100px] animate-pulse-glow delay-1000" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gleego-purple/15 rounded-full blur-[150px]" />
+      
+      {/* Scan lines effect */}
+      <div className="absolute inset-0 bg-[linear-gradient(transparent_50%,rgba(0,0,0,0.1)_50%)] bg-[length:100%_4px] pointer-events-none opacity-20" />
       
       <div className="container mx-auto px-6 relative z-10">
         <motion.div
@@ -47,23 +34,26 @@ const Hero = () => {
           transition={{ duration: 0.8 }}
           className="text-center max-w-5xl mx-auto"
         >
-          {/* Badge */}
+          {/* Logo Gleego Central */}
           <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
+            initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass mb-8"
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="mb-8"
           >
-            <Layers className="w-4 h-4 text-gleego-cyan" />
-            <span className="text-sm text-muted-foreground">
-              Ecossistema de ferramentas para vendas
-            </span>
+            <img 
+              src={logoGleego} 
+              alt="Gleego" 
+              className="h-24 md:h-32 lg:h-40 w-auto mx-auto drop-shadow-[0_0_30px_rgba(0,255,255,0.4)]"
+            />
           </motion.div>
 
           {/* Main Heading */}
           <h1 className="font-display text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
             <span className="text-foreground">Universo</span>{" "}
-            <span className="text-gradient-rainbow">Gleego</span>
+            <span className="bg-gradient-to-r from-gleego-cyan via-gleego-pink to-gleego-purple bg-clip-text text-transparent drop-shadow-[0_0_20px_rgba(0,255,255,0.5)]">
+              Gleego
+            </span>
           </h1>
 
           <motion.p
@@ -73,9 +63,9 @@ const Hero = () => {
             className="text-xl md:text-2xl text-muted-foreground mb-4 max-w-3xl mx-auto"
           >
             Um ecossistema completo para{" "}
-            <span className="text-gleego-cyan font-semibold">geração</span>,{" "}
-            <span className="text-gleego-green font-semibold">gestão</span> e{" "}
-            <span className="text-gleego-pink font-semibold">conversão</span> de leads
+            <span className="text-gleego-cyan font-semibold drop-shadow-[0_0_10px_rgba(0,255,255,0.6)]">geração</span>,{" "}
+            <span className="text-gleego-green font-semibold drop-shadow-[0_0_10px_rgba(0,255,128,0.6)]">gestão</span> e{" "}
+            <span className="text-gleego-pink font-semibold drop-shadow-[0_0_10px_rgba(255,0,128,0.6)]">conversão</span> de leads
           </motion.p>
 
           <motion.p
@@ -87,27 +77,27 @@ const Hero = () => {
             Da captação até a venda — todas as ferramentas conectadas em um único fluxo operacional.
           </motion.p>
 
-          {/* Stats */}
+          {/* Stats com estilo cyberpunk */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.5 }}
-            className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-12 pt-12 border-t border-border/50"
+            className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-12 pt-12 border-t border-gleego-cyan/20"
           >
             {[
-              { value: "5", label: "Ferramentas Integradas", color: "text-gleego-cyan" },
-              { value: "24/7", label: "IA Operando", color: "text-gleego-green" },
-              { value: "100%", label: "Automatizado", color: "text-gleego-orange" },
-              { value: "∞", label: "Possibilidades", color: "text-gleego-pink" },
+              { value: "5", label: "Ferramentas Integradas", color: "text-gleego-cyan", glow: "drop-shadow-[0_0_10px_rgba(0,255,255,0.8)]" },
+              { value: "24/7", label: "IA Operando", color: "text-gleego-green", glow: "drop-shadow-[0_0_10px_rgba(0,255,128,0.8)]" },
+              { value: "100%", label: "Automatizado", color: "text-gleego-pink", glow: "drop-shadow-[0_0_10px_rgba(255,0,128,0.8)]" },
+              { value: "∞", label: "Possibilidades", color: "text-gleego-purple", glow: "drop-shadow-[0_0_10px_rgba(168,85,247,0.8)]" },
             ].map((stat, index) => (
               <motion.div
                 key={stat.label}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.6 + index * 0.1 }}
-                className="text-center"
+                className="text-center glass p-4 rounded-lg border border-gleego-cyan/10 hover:border-gleego-cyan/30 transition-all duration-300"
               >
-                <div className={`text-3xl md:text-4xl font-bold ${stat.color} font-display`}>
+                <div className={`text-3xl md:text-4xl font-bold ${stat.color} ${stat.glow} font-display`}>
                   {stat.value}
                 </div>
                 <div className="text-sm text-muted-foreground mt-1">{stat.label}</div>
@@ -123,7 +113,7 @@ const Hero = () => {
         animate={{ y: [0, 8, 0] }}
         transition={{ duration: 1.5, repeat: Infinity }}
       >
-        <div className="w-6 h-10 rounded-full border-2 border-muted-foreground/30 flex justify-center pt-2">
+        <div className="w-6 h-10 rounded-full border-2 border-gleego-cyan/50 flex justify-center pt-2 shadow-[0_0_15px_rgba(0,255,255,0.3)]">
           <div className="w-1.5 h-3 bg-gradient-to-b from-gleego-cyan to-gleego-pink rounded-full" />
         </div>
       </motion.div>
