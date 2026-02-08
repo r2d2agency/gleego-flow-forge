@@ -10,6 +10,7 @@ import {
 import logoFormflow from "@/assets/logo-formflow.png";
 import logoZaipher from "@/assets/logo-zaipher.png";
 import logoWhatsale from "@/assets/logo-whatsale.webp";
+import logoBlaster from "@/assets/logo-blaster.png";
 
 // TODO: Substituir logoUrl pelos paths reais das logos quando forem enviadas
 // TODO: Substituir accessUrl pelos links reais de cada ferramenta
@@ -92,7 +93,7 @@ const tools: ToolData[] = [
   },
   {
     icon: Megaphone,
-    logoUrl: undefined,
+    logoUrl: logoBlaster,
     title: "Blaster",
     subtitle: "Disparo de Mensagens em Massa",
     description:
