@@ -86,12 +86,12 @@ const ToolCard = ({
         {/* Header */}
         <div className="flex items-start gap-5 mb-6">
           {/* Logo or Icon */}
-          <div className={`w-16 h-16 rounded-2xl ${colors.bg} flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-500`}>
+          <div className={`${logoUrl ? 'w-20 h-20' : 'w-16 h-16'} rounded-2xl ${logoUrl ? '' : colors.bg} flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-500`}>
             {logoUrl ? (
               <img 
                 src={logoUrl} 
                 alt={`${title} logo`} 
-                className="w-10 h-10 object-contain"
+                className="w-full h-full object-contain"
               />
             ) : Icon ? (
               <Icon className={`w-8 h-8 ${colors.text}`} />
