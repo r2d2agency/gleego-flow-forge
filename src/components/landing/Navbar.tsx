@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
+import logoGleego from "@/assets/logo-gleego.webp";
 
 const navLinks = [
   { label: "Início", href: "#" },
@@ -27,14 +28,18 @@ const Navbar = () => {
         animate={{ y: 0 }}
         transition={{ duration: 0.5 }}
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-          isScrolled ? "glass py-4" : "py-6"
+          isScrolled ? "glass py-3" : "py-5"
         }`}
       >
         <div className="container mx-auto px-6">
           <div className="flex items-center justify-between">
             {/* Logo */}
-            <a href="#" className="font-display text-2xl font-bold text-gradient">
-              Gleego
+            <a href="#" className="flex items-center">
+              <img 
+                src={logoGleego} 
+                alt="Gleego" 
+                className="h-10 md:h-12 w-auto"
+              />
             </a>
 
             {/* Desktop Nav */}

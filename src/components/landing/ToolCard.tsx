@@ -43,12 +43,6 @@ const ToolCard = ({
       border: "border-gleego-blue/30",
       gradient: "from-gleego-blue/20 to-transparent"
     },
-    purple: { 
-      bg: "bg-gleego-purple/10", 
-      text: "text-gleego-purple", 
-      border: "border-gleego-purple/30",
-      gradient: "from-gleego-purple/20 to-transparent"
-    },
     green: { 
       bg: "bg-gleego-green/10", 
       text: "text-gleego-green", 
@@ -60,6 +54,18 @@ const ToolCard = ({
       text: "text-gleego-orange", 
       border: "border-gleego-orange/30",
       gradient: "from-gleego-orange/20 to-transparent"
+    },
+    pink: { 
+      bg: "bg-gleego-pink/10", 
+      text: "text-gleego-pink", 
+      border: "border-gleego-pink/30",
+      gradient: "from-gleego-pink/20 to-transparent"
+    },
+    purple: { 
+      bg: "bg-gleego-purple/10", 
+      text: "text-gleego-purple", 
+      border: "border-gleego-purple/30",
+      gradient: "from-gleego-purple/20 to-transparent"
     },
   };
 
