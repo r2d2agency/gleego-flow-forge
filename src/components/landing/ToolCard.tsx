@@ -86,7 +86,7 @@ const ToolCard = ({
         {/* Header */}
         <div className="flex items-start gap-5 mb-6">
           {/* Logo or Icon */}
-          <div className={`${logoUrl ? 'w-20 h-20' : 'w-16 h-16'} rounded-2xl ${logoUrl ? '' : colors.bg} flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-500`}>
+          <div className={`${logoUrl ? 'w-28 h-28' : 'w-16 h-16'} rounded-2xl ${logoUrl ? '' : colors.bg} flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-500`}>
             {logoUrl ? (
               <img 
                 src={logoUrl} 
