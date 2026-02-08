@@ -6,11 +6,13 @@ import {
   MessageSquare,
   Bot,
   Megaphone,
+  MapPin,
 } from "lucide-react";
 import logoFormflow from "@/assets/logo-formflow.png";
 import logoZaipher from "@/assets/logo-zaipher.png";
 import logoWhatsale from "@/assets/logo-whatsale.webp";
 import logoBlaster from "@/assets/logo-blaster.png";
+import logoGleego from "@/assets/logo-gleego.webp";
 
 // TODO: Substituir logoUrl pelos paths reais das logos quando forem enviadas
 // TODO: Substituir accessUrl pelos links reais de cada ferramenta
@@ -33,6 +35,25 @@ const tools: ToolData[] = [
     color: "pink",
     purpose: "Coletar dados e enviar os leads diretamente para o CRM.",
     accessUrl: "#",
+  },
+  {
+    icon: MapPin,
+    logoUrl: logoGleego,
+    title: "Gleego Lead",
+    subtitle: "Extração de Leads Qualificados",
+    description:
+      "Ferramenta de extração e geração de leads qualificados. Busca empresas no Google Maps por segmento e localização, valida WhatsApp e coleta dados oficiais automaticamente.",
+    features: [
+      "Busca no Google Maps",
+      "Validação de WhatsApp",
+      "Dados oficiais (CNPJ, CNAE, sócios)",
+      "Nome fantasia e endereço",
+      "Capital social e informações",
+      "Exportação de contatos",
+    ],
+    color: "orange",
+    purpose: "Automatizar prospecção e encontrar contatos reais com dados completos em minutos.",
+    accessUrl: "https://gleego.com.br",
   },
   {
     icon: Search,
