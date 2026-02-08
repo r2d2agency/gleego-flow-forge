@@ -27,8 +27,11 @@ const Footer = () => {
             <a href="#ferramentas" className="hover:text-foreground transition-colors">
               Ferramentas
             </a>
-            <a href="#" className="hover:text-foreground transition-colors">
+            <a href="https://wa.me/5517991308048" target="_blank" rel="noopener noreferrer" className="hover:text-foreground transition-colors">
               Contato
+            </a>
+            <a href="https://wa.me/5517991308048" target="_blank" rel="noopener noreferrer" className="hover:text-foreground transition-colors">
+              Contrate
             </a>
           </nav>
 
