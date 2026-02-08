@@ -9,6 +9,7 @@ import {
 } from "lucide-react";
 import logoFormflow from "@/assets/logo-formflow.png";
 import logoZaipher from "@/assets/logo-zaipher.png";
+import logoWhatsale from "@/assets/logo-whatsale.webp";
 
 // TODO: Substituir logoUrl pelos paths reais das logos quando forem enviadas
 // TODO: Substituir accessUrl pelos links reais de cada ferramenta
@@ -53,8 +54,8 @@ const tools: ToolData[] = [
   },
   {
     icon: MessageSquare,
-    logoUrl: undefined,
-    title: "Whats.r2bot",
+    logoUrl: logoWhatsale,
+    title: "Whatsale",
     subtitle: "CRM Inteligente com WhatsApp",
     description:
       "O coração comercial da Gleego. Centraliza atendimento, CRM, automação, marketing e inteligência em uma única plataforma.",
