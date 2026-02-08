@@ -4,35 +4,36 @@ import { Zap, Users, Bot, MessageSquare, Layers } from "lucide-react";
 const Hero = () => {
   return (
     <section className="relative min-h-[80vh] flex items-center justify-center overflow-hidden pt-20">
-      {/* Background Effects */}
+      {/* Background Effects - mais colorido */}
       <div className="absolute inset-0 bg-glow" />
-      <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-gleego-cyan/10 rounded-full blur-3xl animate-pulse-glow" />
-      <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-gleego-purple/10 rounded-full blur-3xl animate-pulse-glow delay-1000" />
+      <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-gleego-cyan/15 rounded-full blur-3xl animate-pulse-glow" />
+      <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-gleego-pink/15 rounded-full blur-3xl animate-pulse-glow delay-1000" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gleego-green/10 rounded-full blur-3xl" />
       
-      {/* Floating Icons */}
+      {/* Floating Icons - cores variadas */}
       <motion.div
-        className="absolute top-20 left-10 md:left-20 text-gleego-cyan/30"
+        className="absolute top-20 left-10 md:left-20 text-gleego-cyan/40"
         animate={{ y: [0, -10, 0] }}
         transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
       >
         <Zap size={40} />
       </motion.div>
       <motion.div
-        className="absolute top-40 right-10 md:right-32 text-gleego-purple/30"
+        className="absolute top-40 right-10 md:right-32 text-gleego-pink/40"
         animate={{ y: [0, -15, 0] }}
         transition={{ duration: 4, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
       >
         <Users size={48} />
       </motion.div>
       <motion.div
-        className="absolute bottom-40 left-10 md:left-32 text-gleego-blue/30"
+        className="absolute bottom-40 left-10 md:left-32 text-gleego-green/40"
         animate={{ y: [0, -12, 0] }}
         transition={{ duration: 3.5, repeat: Infinity, ease: "easeInOut", delay: 1 }}
       >
         <Bot size={44} />
       </motion.div>
       <motion.div
-        className="absolute bottom-32 right-10 md:right-20 text-gleego-green/30"
+        className="absolute bottom-32 right-10 md:right-20 text-gleego-orange/40"
         animate={{ y: [0, -8, 0] }}
         transition={{ duration: 3.2, repeat: Infinity, ease: "easeInOut", delay: 0.8 }}
       >
@@ -62,7 +63,7 @@ const Hero = () => {
           {/* Main Heading */}
           <h1 className="font-display text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
             <span className="text-foreground">Universo</span>{" "}
-            <span className="text-gradient">Gleego</span>
+            <span className="text-gradient-rainbow">Gleego</span>
           </h1>
 
           <motion.p
@@ -73,8 +74,8 @@ const Hero = () => {
           >
             Um ecossistema completo para{" "}
             <span className="text-gleego-cyan font-semibold">geração</span>,{" "}
-            <span className="text-gleego-blue font-semibold">gestão</span> e{" "}
-            <span className="text-gleego-purple font-semibold">conversão</span> de leads
+            <span className="text-gleego-green font-semibold">gestão</span> e{" "}
+            <span className="text-gleego-pink font-semibold">conversão</span> de leads
           </motion.p>
 
           <motion.p
@@ -94,10 +95,10 @@ const Hero = () => {
             className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-12 pt-12 border-t border-border/50"
           >
             {[
-              { value: "5", label: "Ferramentas Integradas" },
-              { value: "24/7", label: "IA Operando" },
-              { value: "100%", label: "Automatizado" },
-              { value: "∞", label: "Possibilidades" },
+              { value: "5", label: "Ferramentas Integradas", color: "text-gleego-cyan" },
+              { value: "24/7", label: "IA Operando", color: "text-gleego-green" },
+              { value: "100%", label: "Automatizado", color: "text-gleego-orange" },
+              { value: "∞", label: "Possibilidades", color: "text-gleego-pink" },
             ].map((stat, index) => (
               <motion.div
                 key={stat.label}
@@ -106,7 +107,7 @@ const Hero = () => {
                 transition={{ duration: 0.5, delay: 0.6 + index * 0.1 }}
                 className="text-center"
               >
-                <div className="text-3xl md:text-4xl font-bold text-gradient font-display">
+                <div className={`text-3xl md:text-4xl font-bold ${stat.color} font-display`}>
                   {stat.value}
                 </div>
                 <div className="text-sm text-muted-foreground mt-1">{stat.label}</div>
@@ -123,7 +124,7 @@ const Hero = () => {
         transition={{ duration: 1.5, repeat: Infinity }}
       >
         <div className="w-6 h-10 rounded-full border-2 border-muted-foreground/30 flex justify-center pt-2">
-          <div className="w-1.5 h-3 bg-gleego-cyan rounded-full" />
+          <div className="w-1.5 h-3 bg-gradient-to-b from-gleego-cyan to-gleego-pink rounded-full" />
         </div>
       </motion.div>
     </section>

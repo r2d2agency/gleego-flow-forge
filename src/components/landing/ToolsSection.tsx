@@ -13,7 +13,7 @@ import {
 const tools: ToolData[] = [
   {
     icon: FileText,
-    logoUrl: undefined, // Aguardando logo
+    logoUrl: undefined,
     title: "FormFlow Builder",
     subtitle: "Captura Inteligente",
     description:
@@ -28,7 +28,7 @@ const tools: ToolData[] = [
     ],
     color: "cyan",
     purpose: "Coletar dados e enviar os leads diretamente para o CRM.",
-    accessUrl: "#", // Aguardando link
+    accessUrl: "#",
   },
   {
     icon: Search,
@@ -64,7 +64,7 @@ const tools: ToolData[] = [
       "Lead Scoring e análise preditiva",
       "Revenue Intelligence",
     ],
-    color: "purple",
+    color: "green",
     purpose: "Organizar leads, conduzir conversas, gerenciar funil e fechar vendas.",
     accessUrl: "#",
   },
@@ -102,7 +102,7 @@ const tools: ToolData[] = [
       "Templates multimídia",
       "Logs detalhados",
     ],
-    color: "green",
+    color: "pink",
     purpose: "Reativar contatos, fazer remarketing e comunicar em escala.",
     accessUrl: "#",
   },
@@ -111,11 +111,12 @@ const tools: ToolData[] = [
 const ToolsSection = () => {
   return (
     <section id="ferramentas" className="py-24 relative">
-      {/* Background Elements */}
+      {/* Background Elements - mais coloridos */}
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
-        <div className="absolute top-1/4 left-0 w-64 h-64 bg-gleego-cyan/5 rounded-full blur-3xl" />
-        <div className="absolute top-1/2 right-0 w-80 h-80 bg-gleego-purple/5 rounded-full blur-3xl" />
-        <div className="absolute bottom-1/4 left-1/4 w-72 h-72 bg-gleego-blue/5 rounded-full blur-3xl" />
+        <div className="absolute top-1/4 left-0 w-64 h-64 bg-gleego-cyan/10 rounded-full blur-3xl" />
+        <div className="absolute top-1/2 right-0 w-80 h-80 bg-gleego-pink/10 rounded-full blur-3xl" />
+        <div className="absolute bottom-1/4 left-1/4 w-72 h-72 bg-gleego-green/10 rounded-full blur-3xl" />
+        <div className="absolute bottom-1/3 right-1/4 w-60 h-60 bg-gleego-orange/10 rounded-full blur-3xl" />
       </div>
 
       <div className="container mx-auto px-6 relative z-10">
@@ -128,7 +129,7 @@ const ToolsSection = () => {
           className="text-center mb-16"
         >
           <h2 className="font-display text-3xl md:text-5xl font-bold mb-4">
-            Nossas <span className="text-gradient">Ferramentas</span>
+            Nossas <span className="text-gradient-rainbow">Ferramentas</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             Cada ferramenta foi projetada para resolver uma etapa específica da jornada comercial — 

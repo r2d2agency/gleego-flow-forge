@@ -64,10 +64,11 @@ export default {
         gleego: {
           cyan: "hsl(var(--gleego-cyan))",
           blue: "hsl(var(--gleego-blue))",
-          purple: "hsl(var(--gleego-purple))",
           green: "hsl(var(--gleego-green))",
           orange: "hsl(var(--gleego-orange))",
           pink: "hsl(var(--gleego-pink))",
+          purple: "hsl(var(--gleego-purple))",
+          coral: "hsl(var(--gleego-coral))",
         },
       },
       borderRadius: {

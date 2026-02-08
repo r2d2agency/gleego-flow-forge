@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import logoGleego from "@/assets/logo-gleego.webp";
 
 const Footer = () => {
   return (
@@ -12,23 +13,19 @@ const Footer = () => {
           className="flex flex-col md:flex-row justify-between items-center gap-6"
         >
           {/* Logo */}
-          <div className="font-display text-2xl font-bold text-gradient">
-            Gleego
-          </div>
+          <img 
+            src={logoGleego} 
+            alt="Gleego" 
+            className="h-10 w-auto"
+          />
 
           {/* Links */}
           <nav className="flex flex-wrap justify-center gap-6 text-sm text-muted-foreground">
             <a href="#" className="hover:text-foreground transition-colors">
               Sobre
             </a>
-            <a href="#" className="hover:text-foreground transition-colors">
+            <a href="#ferramentas" className="hover:text-foreground transition-colors">
               Ferramentas
-            </a>
-            <a href="#" className="hover:text-foreground transition-colors">
-              Preços
-            </a>
-            <a href="#" className="hover:text-foreground transition-colors">
-              Blog
             </a>
             <a href="#" className="hover:text-foreground transition-colors">
               Contato
