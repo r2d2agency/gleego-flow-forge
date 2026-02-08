@@ -60,7 +60,7 @@ const Hero = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}
-            className="text-xl md:text-2xl text-muted-foreground mb-4 max-w-3xl mx-auto"
+            className="text-xl md:text-2xl text-foreground/90 mb-4 max-w-3xl mx-auto"
           >
             Um ecossistema completo para{" "}
             <span className="text-gleego-cyan font-semibold drop-shadow-[0_0_10px_rgba(0,255,255,0.6)]">geração</span>,{" "}
@@ -72,7 +72,7 @@ const Hero = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="text-lg text-muted-foreground/80 mb-10 max-w-2xl mx-auto"
+            className="text-lg text-foreground/70 mb-10 max-w-2xl mx-auto"
           >
             Da captação até a venda — todas as ferramentas conectadas em um único fluxo operacional.
           </motion.p>
