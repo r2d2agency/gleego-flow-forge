@@ -1,8 +1,7 @@
 import Navbar from "@/components/landing/Navbar";
 import Hero from "@/components/landing/Hero";
 import EcosystemOverview from "@/components/landing/EcosystemOverview";
-import ModulesSection from "@/components/landing/ModulesSection";
-import CTASection from "@/components/landing/CTASection";
+import ToolsSection from "@/components/landing/ToolsSection";
 import Footer from "@/components/landing/Footer";
 
 const Index = () => {
@@ -11,8 +10,7 @@ const Index = () => {
       <Navbar />
       <Hero />
       <EcosystemOverview />
-      <ModulesSection />
-      <CTASection />
+      <ToolsSection />
       <Footer />
     </div>
   );

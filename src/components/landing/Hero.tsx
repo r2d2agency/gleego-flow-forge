@@ -1,10 +1,9 @@
 import { motion } from "framer-motion";
-import { Button } from "@/components/ui/button";
-import { ArrowRight, Zap, Users, Bot, MessageSquare, Megaphone } from "lucide-react";
+import { Zap, Users, Bot, MessageSquare, Layers } from "lucide-react";
 
 const Hero = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section className="relative min-h-[80vh] flex items-center justify-center overflow-hidden pt-20">
       {/* Background Effects */}
       <div className="absolute inset-0 bg-glow" />
       <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-gleego-cyan/10 rounded-full blur-3xl animate-pulse-glow" />
@@ -54,9 +53,9 @@ const Hero = () => {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass mb-8"
           >
-            <Megaphone className="w-4 h-4 text-gleego-cyan" />
+            <Layers className="w-4 h-4 text-gleego-cyan" />
             <span className="text-sm text-muted-foreground">
-              O ecossistema completo para suas vendas
+              Ecossistema de ferramentas para vendas
             </span>
           </motion.div>
 
@@ -87,31 +86,15 @@ const Hero = () => {
             Da captação até a venda — todas as ferramentas conectadas em um único fluxo operacional.
           </motion.p>
 
-          {/* CTA Buttons */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.5 }}
-            className="flex flex-col sm:flex-row gap-4 justify-center items-center"
-          >
-            <Button variant="hero" size="xl" className="group">
-              Começar Agora
-              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-            </Button>
-            <Button variant="heroOutline" size="xl">
-              Explorar Ferramentas
-            </Button>
-          </motion.div>
-
           {/* Stats */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.7 }}
-            className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-16 pt-16 border-t border-border/50"
+            transition={{ duration: 0.8, delay: 0.5 }}
+            className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-12 pt-12 border-t border-border/50"
           >
             {[
-              { value: "5+", label: "Ferramentas Integradas" },
+              { value: "5", label: "Ferramentas Integradas" },
               { value: "24/7", label: "IA Operando" },
               { value: "100%", label: "Automatizado" },
               { value: "∞", label: "Possibilidades" },
@@ -120,7 +103,7 @@ const Hero = () => {
                 key={stat.label}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.8 + index * 0.1 }}
+                transition={{ duration: 0.5, delay: 0.6 + index * 0.1 }}
                 className="text-center"
               >
                 <div className="text-3xl md:text-4xl font-bold text-gradient font-display">
